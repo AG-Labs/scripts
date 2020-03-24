@@ -1,5 +1,4 @@
 #!/bin/bash
-
 unzip -p This_is_a_test.docx word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g' > temp.txt
 
 readarray -t mySearches < "temp.txt"
